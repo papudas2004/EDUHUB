@@ -1,0 +1,167 @@
+/* ==========================================================================
+   1. Page Container Layout
+   ========================================================================== */
+.register-page-container {
+  background-color: #0f172a; /* Deep luxury matching slate background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. Main Center Card Wrapper
+   ========================================================================== */
+.register-card {
+  background: rgba(30, 41, 59, 0.4); /* Glassmorphic transparency look */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.register-card h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.register-card .subtitle {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   3. Dynamic Form Field Typography
+   ========================================================================== */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.input-group input {
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Focused active border state matches our Emerald theme accent color */
+.input-group input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* Placeholder font text color overrides */
+.input-group input::placeholder {
+  color: #475569;
+}
+
+/* ==========================================================================
+   4. Action Buttons & Alerts
+   ========================================================================== */
+.submit-register-btn {
+  background-color: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+  margin-top: 0.5rem;
+}
+
+.submit-register-btn:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.submit-register-btn:disabled {
+  background-color: #1e293b;
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* High Visibility Red Feedback Error Alerts Box */
+.form-error-alert {
+  background-color: rgba(244, 63, 94, 0.1);
+  color: #f43f5e;
+  border: 1px solid rgba(244, 63, 94, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   5. Switching Auth Footnotes Navigation Links
+   ========================================================================== */
+.auth-footer-text {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 2rem 0 0 0;
+}
+
+.auth-footer-text a {
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.auth-footer-text a:hover {
+  color: #34d399;
+}
+
+/* ==========================================================================
+   6. Smart Phone Adaptive Scale Overrides
+   ========================================================================== */
+@media (max-width: 480px) {
+  .register-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .register-card h2 {
+    font-size: 1.75rem;
+  }
+}

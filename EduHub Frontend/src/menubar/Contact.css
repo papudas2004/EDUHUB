@@ -1,0 +1,120 @@
+/* Full-screen Slate Dark Canvas Wrapper Style */
+.classic-dark-wrapper {
+  background-color: #0f172a !important; /* Deep console canvas backdrop */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Central Form Container Card Box configuration */
+.classic-form-card {
+  background-color: #1e293b !important; /* Premium slate console background */
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  width: 100%;
+  max-width: 680px; /* Neatly spaced profile grid layout constraints */
+}
+
+/* Typography styles */
+.form-main-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.form-subtitle {
+  font-size: 0.9rem;
+}
+
+.form-divider-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+
+/* Green status accent indicator point asset */
+.form-indicator-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Label descriptor parameters */
+.classic-form-label {
+  color: #94a3b8; /* Soft slate text labels */
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Premium dark custom input field styling parameters overrides */
+.classic-dark-input {
+  background-color: rgba(15, 23, 42, 0.6) !important; /* Deep internal field block fill */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f8fafc !important; /* Bright input values text layer */
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  font-size: 0.95rem !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Form input focus active indicator behaviors */
+.classic-dark-input:focus {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  border-color: #10b981 !important; /* Soft emerald focus highlight */
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15) !important;
+  outline: none;
+}
+
+/* Form input field placeholders color settings */
+.classic-dark-input::placeholder {
+  color: #475569 !important;
+  font-size: 0.9rem;
+}
+
+/* Button UI Action Configurations */
+.btn-emerald-save {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 10px 24px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-emerald-save:hover {
+  background-color: #059669 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn-classic-reset {
+  background-color: #334155 !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  padding: 10px 24px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-classic-reset:hover {
+  background-color: #475569 !important;
+  color: #ffffff !important;
+}
+
+.btn-classic-cancel {
+  background-color: transparent !important;
+  color: #64748b !important;
+  border: none !important;
+  font-weight: 500 !important;
+  padding: 10px 16px !important;
+  transition: color 0.2s ease !important;
+}
+
+.btn-classic-cancel:hover {
+  color: #ef4444 !important; /* Soft alert crimson on cancel hover */
+}

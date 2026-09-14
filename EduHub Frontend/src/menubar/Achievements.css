@@ -1,0 +1,251 @@
+/* EduHub Gamification & Achievements Styles */
+.achievements-saas-page {
+  padding: 3rem 0 5rem;
+}
+
+.achievements-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.achievements-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin: 0.85rem 0 0.5rem;
+}
+
+.achievements-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* Hero Grid */
+.gamify-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.level-card, .streak-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.level-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.level-badge-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
+}
+
+.level-info-col h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0.35rem 0 0.2rem;
+}
+
+.level-info-col p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.level-progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.xp-remaining-text {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 0.2rem;
+}
+
+/* Streak Card */
+.streak-top {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.streak-icon-huge {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.streak-top h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.25rem;
+}
+
+.streak-top p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.streak-calendar-strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.streak-day-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 0.5rem;
+  background: #090d16;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  flex: 1;
+}
+
+.streak-day-box.active {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.day-name {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.day-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.streak-day-box.active .day-dot {
+  background: #f59e0b;
+  color: #000;
+}
+
+/* Badges Grid */
+.badges-section-header {
+  margin-bottom: 2rem;
+}
+
+.badges-section-header h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.35rem;
+}
+
+.badges-section-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.badge-card {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.badge-card.locked {
+  opacity: 0.55;
+  filter: grayscale(0.5);
+}
+
+.badge-card.locked:hover {
+  opacity: 0.8;
+  filter: grayscale(0.2);
+}
+
+.badge-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.badge-emoji-box {
+  font-size: 2.2rem;
+}
+
+.badge-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.4rem;
+}
+
+.badge-desc {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.badge-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+}
+
+.unlocked-text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #34d399;
+  font-weight: 600;
+}
+
+.locked-text {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 992px) {
+  .gamify-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}

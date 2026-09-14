@@ -1,0 +1,24 @@
+{
+  "name": "eduhub-platform",
+  "version": "2.0.0",
+  "description": "EduHub — Modern Full-Stack MERN EdTech & Learning Operating System for MCA Placement Portfolio",
+  "private": true,
+  "scripts": {
+    "start:backend": "cd \"EduHub Backend\" && npm run start",
+    "dev:backend": "cd \"EduHub Backend\" && npm run dev",
+    "dev:frontend": "cd \"EduHub Frontend\" && npm run dev",
+    "build:frontend": "cd \"EduHub Frontend\" && npm run build"
+  },
+  "keywords": [
+    "mern",
+    "react19",
+    "nodejs",
+    "express",
+    "mongodb",
+    "ai-tutor",
+    "edtech",
+    "placement-portfolio"
+  ],
+  "author": "Papu Das",
+  "license": "MIT"
+}

@@ -1,0 +1,137 @@
+/* Full-screen Slate Dark Canvas Wrapper Style */
+.classic-dark-wrapper {
+  background-color: #0f172a !important; /* Deep console canvas backdrop */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.max-layout-container {
+  max-width: 1400px; 
+}
+
+/* Header typography elements formatting */
+.console-main-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.console-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8 !important; /* FIXED: Soft crisp gray text that breaks through dark overloading */
+}
+
+.section-panel-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Emerald Add Action Button matching verified console accents */
+.btn-emerald-add {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-emerald-add:hover {
+  background-color: #059669 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* Dashboard styled glowing status point asset indicator dot */
+.status-indicator-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Panel block backdrop container wrapper card box layout configurations */
+.classic-console-card {
+  background-color: #1e293b !important; /* Premium slate console background */
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* Strips away default browser/bootstrap white overrides */
+.table-dark-classic {
+  background-color: transparent !important;
+  color: #cbd5e1 !important;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-dark-classic thead th {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  color: #94a3b8 !important; 
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Forces table cells to drop white backgrounds and be dark slate */
+.table-dark-classic tbody tr td {
+  background-color: transparent !important; 
+  color: #cbd5e1 !important;
+  padding: 20px 16px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Hover highlights row cleanly */
+.table-dark-classic tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.text-white-emphasis {
+  color: #f8fafc !important;
+  font-weight: 600;
+}
+
+.text-muted-cyan {
+  color: #38bdf8 !important; 
+  font-size: 0.9rem;
+}
+
+/* Action button formatting to match modern clean interface widths */
+.actions-cell-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-action-view, .btn-action-update, .btn-action-delete {
+  padding: 6px 16px !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  border: none !important;
+  color: #ffffff !important;
+  transition: background-color 0.2s ease;
+}
+
+.btn-action-view { background-color: #0ea5e9 !important; }
+.btn-action-view:hover { background-color: #0284c7 !important; }
+
+.btn-action-update { background-color: #f59e0b !important; }
+.btn-action-update:hover { background-color: #d97706 !important; }
+
+.btn-action-delete { background-color: #ef4444 !important; }
+.btn-action-delete:hover { background-color: #dc2626 !important; }

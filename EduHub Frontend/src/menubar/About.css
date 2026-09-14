@@ -1,0 +1,434 @@
+/* ==========================================================================
+   1. Core Container Layout
+   ========================================================================== */
+.about-container {
+  background-color: #0f172a; /* Deep matching slate background */
+  color: #f8fafc;
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Keeps fluid dashboard structure alignment options active */
+.classic-dark-wrapper {
+  background-color: #0f172a !important;
+}
+
+.max-layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. Minimalist Header Section
+   ========================================================================== */
+.about-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 5rem auto;
+}
+
+.section-badge, .about-section-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.about-title, .about-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 1.5rem 0 1rem 0;
+  letter-spacing: -1px;
+  color: #ffffff;
+}
+
+.about-subtitle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Glowing status bar item point */
+.about-indicator-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* ==========================================================================
+   3. Dual-Column Story Section
+   ========================================================================== */
+.about-grid {
+  max-width: 1200px;
+  margin: 0 auto 6rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image-side {
+  position: relative;
+  width: 100%;
+}
+
+.story-img-fallback {
+  width: 100%;
+  height: 400px;
+  background: #111827;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box;
+}
+
+.fallback-svg {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+}
+
+.image-accent-glow, .artwork-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #10b981;
+  border-radius: 12px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.about-text-side h2, .section-panel-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.about-text-side p, .text-panel-paragraph {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10b981;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.cta-link-button:hover {
+  color: #34d399;
+}
+
+.cta-link-button:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.arrow-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* ==========================================================================
+   4. Live Performance Metrics Row
+   ========================================================================== */
+.metrics-bar, .metric-box {
+  background: #1e293b !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px;
+}
+
+.metrics-bar {
+  max-width: 1200px;
+  margin: 0 auto 6rem auto;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-item:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.metric-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #10b981 !important; /* Soft console glow accent */
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   5. Core Foundations Grid Block
+   ========================================================================== */
+.values-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.values-main-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.value-card, .interactive-value-card {
+  background: rgba(30, 41, 59, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.value-card:hover, .interactive-value-card:hover {
+  background: #1e293b !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  transform: translateY(-4px);
+}
+
+.value-index, .value-index-id {
+  font-size: 0.85rem;
+  color: #10b981;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.value-card h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.value-card p, .text-muted-paragraph {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Extra hint text items for active expanders */
+.interactive-hint-text {
+  font-size: 0.7rem;
+  color: #475569;
+  text-transform: uppercase;
+}
+
+.text-emerald-link {
+  color: #10b981;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   6. Dynamic Curriculum Focus Layout Extensions
+   ========================================================================== */
+.classic-console-card {
+  background-color: #1e293b !important;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.btn-track-filter {
+  background-color: #0f172a !important;
+  color: #64748b !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  padding: 6px 16px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-track-filter.active, .btn-track-filter:hover {
+  background-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+.course-mini-card {
+  background-color: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+}
+
+.card-course-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.badge-track-software { background-color: rgba(56, 189, 248, 0.1); color: #38bdf8; }
+.badge-track-data { background-color: rgba(168, 85, 247, 0.1); color: #a855f7; }
+
+/* ==========================================================================
+   7. Foundational Card Popup Overlays
+   ========================================================================== */
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 1050;
+}
+
+.custom-modal-card {
+  background-color: #1e293b;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.text-slate-light-paragraph {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-close-modal {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 1.2rem;
+  transition: color 0.15s ease;
+}
+
+.btn-close-modal:hover { color: #f8fafc; }
+
+/* ==========================================================================
+   8. Bottom Conversion Box Section
+   ========================================================================== */
+.about-footer-conversion, .footer-conversion-panel {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px dashed rgba(255, 255, 255, 0.1) !important; 
+  padding: 3.5rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.about-footer-conversion h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.conversion-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.about-btn-action, .btn-emerald-about, .btn-slate-secondary {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.primary-action, .btn-emerald-about {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.primary-action:hover, .btn-emerald-about:hover {
+  background-color: #059669 !important;
+  transform: translateY(-1px);
+}
+
+.secondary-action, .btn-slate-secondary {
+  background-color: transparent !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.secondary-action:hover, .btn-slate-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: #ffffff !important;
+}
+
+/* ==========================================================================
+   9. Responsive Design Media Queries
+   ========================================================================= */
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+  
+  .metric-item:nth-child(2) {
+    border-right: none;
+  }
+  
+  .about-title {
+    font-size: 2.25rem;
+  }
+  
+  .conversion-actions {
+    flex-direction: column;

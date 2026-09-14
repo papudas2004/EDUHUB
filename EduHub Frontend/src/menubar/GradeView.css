@@ -1,0 +1,113 @@
+.grades-container {
+  background-color: #0b1329;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.grades-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grades-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.grades-header p {
+  color: #94a3b8;
+}
+
+.gpa-summary-card {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  background: linear-gradient(135deg, #1d4ed8, #10b981);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gpa-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.gpa-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.gpa-label {
+  font-size: 14px;
+  color: #e2e8f0;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-responsive {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #1c2541;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  overflow-x: auto;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+
+.grades-table th {
+  background-color: #131c35;
+  padding: 16px 20px;
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.grades-table td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #1e293b;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.grades-table tr:last-child td {
+  border-bottom: none;
+}
+
+.bold-cell {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.score-cell {
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.grade-tag {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  display: inline-block;
+  min-width: 32px;
+  text-align: center;
+}
+
+.grade-tag.g-o { background-color: #22c55e; color: white; }
+.grade-tag.g-ap { background-color: #3b82f6; color: white; }
+.grade-tag.g-a { background-color: #60a5fa; color: #0b1329; }
+.grade-tag.g-bp { background-color: #eab308; color: #0b1329; }

@@ -1,0 +1,184 @@
+/* src/component/components.css */
+
+/* Global Glassmorphism & Card Design */
+.edu-card {
+  background: rgba(25, 28, 36, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.edu-title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00e676;
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+.edu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edu-input {
+  background: #11141a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.edu-input:focus {
+  border-color: #00e676;
+}
+
+/* File Upload Workspace */
+.edu-uploader-box {
+  border: 2px dashed #333;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  background: #11141a;
+}
+
+.edu-upload-label {
+  background: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.edu-upload-label:hover {
+  background: #444;
+}
+
+.edu-file-name {
+  color: #00e676;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Classic Button Gradients */
+.edu-btn-primary {
+  background: linear-gradient(135deg, #00e676 0%, #00b0ff 100%);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.edu-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.edu-btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Course Viewer Grid Layout */
+.edu-viewer-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background: #0f111a;
+  border-radius: 12px;
+  min-height: 70vh;
+}
+
+.edu-video-pane {
+  background: #141824;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.edu-video-placeholder {
+  background: #000;
+  aspect-ratio: 16/9;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  color: #666;
+}
+
+.edu-sidebar-pane {
+  background: #141824;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.edu-sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edu-sidebar-item {
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #222;
+  color: #fff;
+}
+
+.edu-sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.edu-sidebar-item.active {
+  background: #1a237e;
+  color: #00e676;
+  border-color: #00e676;
+}
+
+/* Administration Tables (Grading Panel / User Management) */
+.edu-table-container {
+  background: rgba(25, 28, 36, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.edu-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.edu-table th {
+  color: #00e676;
+  border-bottom: 2px solid #333;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.edu-table td {
+  color: #fff;
+  border-bottom: 1px solid #222;
+  padding: 12px;
+}
+
+.edu-table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}

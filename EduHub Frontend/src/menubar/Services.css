@@ -1,0 +1,164 @@
+/* Full-screen Slate Dark Canvas Wrapper Style */
+.classic-dark-wrapper {
+  background-color: #0f172a !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.max-layout-container {
+  max-width: 1400px;
+}
+
+/* Header typography elements formatting */
+.services-main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.75px;
+}
+
+.services-subtitle {
+  font-size: 1rem;
+  color: #94a3b8 !important;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.services-section-badge {
+  color: #10b981;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.services-indicator-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+}
+
+/* Core Service layout cards structure settings */
+.classic-service-card {
+  background-color: #1e293b !important;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.classic-service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.25);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Image framing box metrics variables */
+.service-image-frame {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.classic-service-card:hover .service-card-image {
+  transform: scale(1.04);
+}
+
+.image-overlay-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 60%, rgba(30, 41, 59, 0.9) 100%);
+}
+
+/* Text presentation formatting elements fields inside internal frames */
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.service-description-text {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Premium styled Control Button Themes elements properties options */
+.btn-emerald-services {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  padding: 10px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-emerald-services:hover {
+  background-color: #059669 !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn-services-secondary {
+  background-color: #334155 !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  padding: 10px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-services-secondary:hover {
+  background-color: #475569 !important;
+  color: #ffffff !important;
+}
+
+/* Dynamic details Modal Popup drawer overlay layouts rules formatting */
+.services-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 1050;
+}
+
+.services-modal-card {
+  background-color: #1e293b;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.services-extended-text {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-close-services {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-size: 1.2rem;
+  transition: color 0.15s ease;
+}
+
+.btn-close-services:hover {
+  color: #f8fafc;
+}
