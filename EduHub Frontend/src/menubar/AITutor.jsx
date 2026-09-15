@@ -18,7 +18,7 @@ import {
   Code2,
   RefreshCw,
 } from "lucide-react";
-import "./aiTutor.css";
+import "./AITutor.css";
 
 function AITutor() {
   const location = useLocation();

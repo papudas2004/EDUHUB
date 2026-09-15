@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createContact } from "../api/api";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./contact.css"; // Links your classic custom theme styles smoothly
+import "./Contact.css"; // Links your classic custom theme styles smoothly
 
 const Contact = () => {
   const navigate = useNavigate();

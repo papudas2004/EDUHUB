@@ -15,7 +15,7 @@ import {
   X,
   Award,
 } from "lucide-react";
-import "./courseCatalog.css";
+import "./CourseCatalog.css";
 
 function CourseCatalog() {
   const [courses, setCourses] = useState([]);

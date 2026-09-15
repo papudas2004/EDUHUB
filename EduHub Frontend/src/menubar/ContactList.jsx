@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAllContacts, deleteContact } from "../api/api";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./contactList.css"; 
+import "./ContactList.css"; 
 
 const ContactList = () => {
   const [contacts, setContacts] = useState([]);

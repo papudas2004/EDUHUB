@@ -19,7 +19,7 @@ import {
   Lock,
   Sparkles,
 } from "lucide-react";
-import "./courseDetails.css";
+import "./CourseDetails.css";
 
 const CourseDetails = () => {
   const { id } = useParams();

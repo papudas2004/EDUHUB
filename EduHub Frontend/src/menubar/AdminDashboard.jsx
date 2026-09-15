@@ -21,7 +21,7 @@ import {
   Sparkles,
   Download,
 } from "lucide-react";
-import "./adminDashboard.css";
+import ".AdminDashboard.css";
 
 function AdminDashboard() {
   const { user } = useAuth();

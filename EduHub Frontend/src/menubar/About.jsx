@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./about.css";
+import "./About.css";
 
 const About = () => {
   const { pathname } = useLocation();
