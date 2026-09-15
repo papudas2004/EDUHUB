@@ -23,7 +23,7 @@ import {
   GraduationCap,
   Trophy,
 } from "lucide-react";
-import "../dashboard.css";
+import "../Dashboard.css"; // Matches your physical file casing exactly
 
 function Dashboard() {
   const { user } = useAuth();
@@ -44,7 +44,6 @@ function Dashboard() {
         if (myLearningRes?.data?.success && myLearningRes.data.myLearning?.length > 0) {
           setEnrolledCourses(myLearningRes.data.myLearning);
         } else {
-          // Default enrolled course for showcase
           setEnrolledCourses([
             {
               courseId: "course-1",
@@ -54,7 +53,7 @@ function Dashboard() {
               instructor: "Siddharth Roy (Senior Tech Lead)",
               duration: "45 Hours",
               totalLessons: 4,
-              completedLessons: [1, 2, 3],
+              completedLessons:,
               progressPercentage: 75,
               lastLessonTitle: "Dockerizing MERN & Cloud CI/CD Pipelines",
               isCompleted: false,
@@ -67,7 +66,7 @@ function Dashboard() {
               instructor: "Dr. Ananya Sen (AI Researcher)",
               duration: "38 Hours",
               totalLessons: 3,
-              completedLessons: [1, 2],
+              completedLessons:,
               progressPercentage: 66,
               lastLessonTitle: "Building RAG with Vector Embeddings",
               isCompleted: false,
@@ -107,7 +106,6 @@ function Dashboard() {
     fetchDashboardData();
   }, [user]);
 
-  // Active continue learning course
   const continueCourse = enrolledCourses[0] || {
     courseId: "course-1",
     title: "Full-Stack MERN Architecture & Cloud Deployment",
@@ -128,12 +126,6 @@ function Dashboard() {
             enrolledCourses.length
         )
       : 72;
-
-  const latestQuiz = quizHistory[0] || {
-    quizTitle: "React 19 & Frontend Engineering Assessment",
-    accuracy: 80,
-    score: 80,
-  };
 
   return (
     <DashboardLayout>
@@ -191,10 +183,7 @@ function Dashboard() {
             </div>
 
             <div className="continue-action-row">
-              <Link
-                to={`/learn/${continueCourse.courseId}`}
-                className="resume-now-btn"
-              >
+              <Link to={`/learn/${continueCourse.courseId}`} className="resume-now-btn">
                 <Play size={18} />
                 <span>Resume Learning</span>
               </Link>
@@ -211,7 +200,7 @@ function Dashboard() {
           </div>
         </div>
 
-        {/* 4 Core KPI Statistics Cards */}
+        {/* Core KPI Statistics Cards */}
         <div className="kpi-stats-grid">
           <div className="kpi-card">
             <div className="kpi-icon-box progress-icon-box">
@@ -232,205 +221,6 @@ function Dashboard() {
               <span className="kpi-label">Learning Streak</span>
               <h3 className="kpi-value">{user?.streak || 7} Days</h3>
               <span className="kpi-meta text-orange">🔥 Consistent active learner</span>
-            </div>
-          </div>
-
-          <div className="kpi-card">
-            <div className="kpi-icon-box xp-icon-box">
-              <Zap size={22} />
-            </div>
-            <div className="kpi-data">
-              <span className="kpi-label">Experience Points</span>
-              <h3 className="kpi-value">{user?.xp || 340} XP</h3>
-              <span className="kpi-meta text-amber">⚡ Level {Math.floor((user?.xp || 340) / 200) + 1} Apprentice</span>
-            </div>
-          </div>
-
-          <div className="kpi-card">
-            <div className="kpi-icon-box cert-icon-box">
-              <Award size={22} />
-            </div>
-            <div className="kpi-data">
-              <span className="kpi-label">Certificates Earned</span>
-              <h3 className="kpi-value">
-                {enrolledCourses.filter((c) => c.isCompleted || c.progressPercentage === 100).length || 1}
-              </h3>
-              <Link to="/certificates" className="kpi-link">
-                View Credentials <ChevronRight size={12} />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Mid Grid: My Courses + Quiz Performance */}
-        <div className="dashboard-columns-layout">
-          {/* Left Column: Enrolled Courses */}
-          <div className="dashboard-left-col">
-            <div className="section-title-bar">
-              <div className="title-with-icon">
-                <BookOpen size={20} className="text-indigo" />
-                <h3 className="section-main-title">Enrolled Courses</h3>
-              </div>
-              <Link to="/my-learning" className="section-more-link">
-                See all <ChevronRight size={14} />
-              </Link>
-            </div>
-
-            <div className="enrolled-courses-vertical-list">
-              {enrolledCourses.map((course, idx) => (
-                <div key={idx} className="enrolled-course-item">
-                  <div className="enrolled-item-main">
-                    <div className="course-cat-tag">{course.category || "Development"}</div>
-                    <h4 className="enrolled-item-title">{course.title}</h4>
-                    <span className="enrolled-item-instructor">By {course.instructor}</span>
-
-                    <div className="enrolled-item-progress-row">
-                      <div className="item-progress-track">
-                        <div
-                          className={`item-progress-fill ${course.progressPercentage === 100 ? "finished" : ""}`}
-                          style={{ width: `${course.progressPercentage || 0}%` }}
-                        />
-                      </div>
-                      <span className="item-progress-number">
-                        {course.progressPercentage || 0}%
-                      </span>
-                    </div>
-                  </div>
-
-                  <Link
-                    to={`/learn/${course.courseId}`}
-                    className="item-resume-btn"
-                  >
-                    <Play size={16} />
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            {/* Recommended Courses Section */}
-            <div className="section-title-bar recommended-margin">
-              <div className="title-with-icon">
-                <Sparkles size={20} className="text-cyan" />
-                <h3 className="section-main-title">Recommended For You</h3>
-              </div>
-              <Link to="/catalog" className="section-more-link">
-                Browse catalog <ChevronRight size={14} />
-              </Link>
-            </div>
-
-            <div className="recommended-grid">
-              {recommendedCourses.slice(0, 2).map((rec, idx) => (
-                <div key={idx} className="recommended-course-card">
-                  <div className="rec-badge-row">
-                    <span className="rec-category">{rec.category}</span>
-                    <span className="rec-rating">
-                      <Star size={12} className="fill-amber text-amber" /> {rec.rating || 4.9}
-                    </span>
-                  </div>
-                  <h4 className="rec-title">{rec.title}</h4>
-                  <p className="rec-desc">{rec.description?.substring(0, 85)}...</p>
-                  <div className="rec-bottom">
-                    <span className="rec-duration">
-                      <Clock size={12} /> {rec.duration || "40h"}
-                    </span>
-                    <Link to={`/courses/${rec._id}`} className="rec-view-btn">
-                      Details <ChevronRight size={14} />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column: Quiz Performance & Achievements */}
-          <div className="dashboard-right-col">
-            {/* Quiz Performance Widget */}
-            <div className="dashboard-widget-card">
-              <div className="widget-header">
-                <div className="title-with-icon">
-                  <HelpCircle size={18} className="text-purple" />
-                  <h4 className="widget-title">Quiz Performance</h4>
-                </div>
-                <Link to="/quizzes" className="widget-more-link">
-                  Test Knowledge
-                </Link>
-              </div>
-
-              <div className="quiz-metric-row">
-                <div className="quiz-circle-metric">
-                  <span className="metric-big">{latestQuiz.accuracy}%</span>
-                  <span className="metric-sub">Accuracy</span>
-                </div>
-                <div className="quiz-meta-info">
-                  <h5 className="latest-quiz-name">{latestQuiz.quizTitle}</h5>
-                  <p className="latest-quiz-summary">
-                    {latestQuiz.correctAnswers || 4} of {latestQuiz.totalQuestions || 5} questions answered correctly.
-                  </p>
-                  <span className="quiz-strength-pill">Strong in React 19 & State</span>
-                </div>
-              </div>
-
-              <Link to="/quizzes" className="take-quiz-action-btn">
-                <span>Start New Placement Assessment</span>
-                <ArrowRight size={15} />
-              </Link>
-            </div>
-
-            {/* Achievements & Badges Widget */}
-            <div className="dashboard-widget-card">
-              <div className="widget-header">
-                <div className="title-with-icon">
-                  <Trophy size={18} className="text-amber" />
-                  <h4 className="widget-title">Earned Badges</h4>
-                </div>
-                <Link to="/achievements" className="widget-more-link">
-                  View all
-                </Link>
-              </div>
-
-              <div className="badges-compact-list">
-                <div className="badge-compact-item unlocked">
-                  <span className="badge-emoji">🔥</span>
-                  <div className="badge-meta">
-                    <h5 className="badge-name">7 Day Streak</h5>
-                    <span className="badge-desc">7 consecutive days of active study</span>
-                  </div>
-                  <CheckCircle2 size={16} className="text-emerald" />
-                </div>
-
-                <div className="badge-compact-item unlocked">
-                  <span className="badge-emoji">📚</span>
-                  <div className="badge-meta">
-                    <h5 className="badge-name">Learning Champion</h5>
-                    <span className="badge-desc">Completed 10+ lessons</span>
-                  </div>
-                  <CheckCircle2 size={16} className="text-emerald" />
-                </div>
-
-                <div className="badge-compact-item in-progress">
-                  <span className="badge-emoji">🎯</span>
-                  <div className="badge-meta">
-                    <h5 className="badge-name">Quiz Master</h5>
-                    <span className="badge-desc">Score 100% on 3 assessments</span>
-                  </div>
-                  <span className="badge-status-pill">1/3</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Placement Study Notes Callout */}
-            <div className="ai-assistant-card-promo">
-              <div className="ai-promo-icon-box">
-                <FileText size={24} className="text-cyan" />
-              </div>
-              <h4 className="ai-promo-title">Placement Study Notes</h4>
-              <p className="ai-promo-desc">
-                Download revision cheat sheets, formula handbooks, and interview guides directly to your browser.
-              </p>
-              <Link to="/materials" className="ai-promo-btn">
-                <span>Browse & Download Notes</span>
-                <ArrowRight size={14} />
-              </Link>
             </div>
           </div>
         </div>
