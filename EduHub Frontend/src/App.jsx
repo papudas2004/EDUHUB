@@ -4,13 +4,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { AuthProvider } from "./context/AuthContext";
 
-// Layout Components
+// Layout Components (Fixed folder matching case: 'component')
 import Footer from "./component/Footer";
 import Navbar from "./component/NavBar";
 import ProtectedRoute from "./component/ProtectedRoute";
 import AdminRoute from "./component/AdminRoute";
 
-// Public & Information Pages
+// Public & Information Pages (Fixed folder matching case: 'menubar')
 import Home from "./menubar/Home";
 import AboutUs from "./menubar/About";
 import Services from "./menubar/Services";
@@ -138,7 +138,6 @@ function App() {
               {/* Preserved Academic Trackers */}
               <Route path="/tasks" element={<TaskTracker />} />
               <Route path="/grades" element={<GradeView />} />
-              <Route path="/Contact-List" element={<Contactlist />} />
               <Route path="/contact-list" element={<Contactlist />} />
               <Route path="/contact-by-id/:id" element={<ContactDetails />} />
               <Route path="/update-contact/:id" element={<UpdateContact />} />
