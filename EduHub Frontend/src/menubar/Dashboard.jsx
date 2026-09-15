@@ -23,7 +23,7 @@ import {
   GraduationCap,
   Trophy,
 } from "lucide-react";
-import "../Dashboard.css";
+import "../dashboard.css";
 
 function Dashboard() {
   const { user } = useAuth();
