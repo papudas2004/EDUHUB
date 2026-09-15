@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../Services.css"; 
+import "./services.css"; 
 
 const Services = () => {
   const navigate = useNavigate();

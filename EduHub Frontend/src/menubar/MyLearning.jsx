@@ -14,7 +14,7 @@ import {
   Layers,
   ArrowRight,
 } from "lucide-react";
-import "../MyLearning.css";
+import "./MyLearning.css";
 
 const MyLearning = () => {
   const { user } = useAuth();

@@ -1,7 +1,7 @@
 // src/menubar/TaskTracker.jsx
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import '../component/components.css'; // Verified file and folder name structure matching your sidebar precisely
+import './TaskTracker.css'; // Fixed to match the file structure in your menubar directory
 
 function TaskTracker() {
   const [tasks, setTasks] = useState([]);
@@ -13,7 +13,6 @@ function TaskTracker() {
         const response = await fetch("http://localhost:8080/api/get-all-tasks");
         const data = await response.json();
         
-        // 🟢 AUTOMATIC INJECTOR ENGINE: If database collection is empty, load your active academic tasks immediately!
         if (response.ok && data.tasks && data.tasks.length > 0) {
           setTasks(data.tasks);
         } else {
@@ -25,7 +24,6 @@ function TaskTracker() {
           setTasks(defaultTasks);
         }
       } catch (error) {
-        // Safe fallback network catch block definition
         console.error("Task server connection failure:", error);
         const defaultTasks = [
           { _id: "TASK-FALLBACK-1", taskDetail: "MERN Stack Secure Authentication Lab", courseStream: "Full-Stack MERN Development", dueDate: "2026-08-01", type: "Assignment", status: "Pending" }
@@ -39,7 +37,6 @@ function TaskTracker() {
   }, []);
 
   const handleToggleStatus = (taskId) => {
-    // Responsive local click state toggle modifier
     setTasks(prevTasks => prevTasks.map(task => 
       task._id === taskId ? { ...task, status: task.status === 'Pending' ? 'Completed' : 'Pending' } : task
     ));

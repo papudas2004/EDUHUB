@@ -23,7 +23,7 @@ import {
   GraduationCap,
   Trophy,
 } from "lucide-react";
-import "../Dashboard.css"; // Matches your physical file casing exactly
+import "./dashboard.css"; // Matches your physical file casing exactly
 
 function Dashboard() {
   const { user } = useAuth();
@@ -53,7 +53,7 @@ function Dashboard() {
               instructor: "Siddharth Roy (Senior Tech Lead)",
               duration: "45 Hours",
               totalLessons: 4,
-              completedLessons:,
+              completedLessons: [], // Fixed missing value here
               progressPercentage: 75,
               lastLessonTitle: "Dockerizing MERN & Cloud CI/CD Pipelines",
               isCompleted: false,
@@ -66,7 +66,7 @@ function Dashboard() {
               instructor: "Dr. Ananya Sen (AI Researcher)",
               duration: "38 Hours",
               totalLessons: 3,
-              completedLessons:,
+              completedLessons: [], // Fixed missing value here
               progressPercentage: 66,
               lastLessonTitle: "Building RAG with Vector Embeddings",
               isCompleted: false,
