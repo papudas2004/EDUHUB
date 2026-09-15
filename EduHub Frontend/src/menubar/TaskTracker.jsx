@@ -1,7 +1,7 @@
 // src/menubar/TaskTracker.jsx
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import './taskTracker.css'; // Fixed to match the file structure in your menubar directory
+import './TaskTracker.css'; // Fixed to match the file structure in your menubar directory
 
 function TaskTracker() {
   const [tasks, setTasks] = useState([]);
