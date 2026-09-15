@@ -1,7 +1,7 @@
 // src/menubar/TaskTracker.jsx
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
-import '../component/components.css'; 
+import '../component/components.css'; // Verified file and folder name structure matching your sidebar precisely
 
 function TaskTracker() {
   const [tasks, setTasks] = useState([]);
@@ -66,24 +66,24 @@ function TaskTracker() {
           <p style={{ color: '#aaa' }}>No unique tasks found in your dedicated collection yet.</p>
         </div>
       ) : (
-        <div className="edu-table-container" style={{ background: '#141824' }}>
-          <table className="edu-table" style={{ width: '100%' }}>
+        <div className="edu-table-container" style={{ background: '#141824', padding: '15px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <table className="edu-table" style={{ width: '100%', borderCollapse: 'collapse', color: '#fff' }}>
             <thead>
-              <tr>
-                <th style={{ width: '60px', textAlign: 'center' }}>Status</th>
-                <th>Task Detail</th>
-                <th>Course Stream</th>
-                <th>Due Date</th>
-                <th style={{ textAlign: 'center' }}>Type</th>
-                <th style={{ textAlign: 'center' }}>Action</th>
+              <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                <th style={{ width: '60px', textAlign: 'center', padding: '12px' }}>Status</th>
+                <th style={{ textAlign: 'left', padding: '12px' }}>Task Detail</th>
+                <th style={{ textAlign: 'left', padding: '12px' }}>Course Stream</th>
+                <th style={{ textAlign: 'left', padding: '12px' }}>Due Date</th>
+                <th style={{ textAlign: 'center', padding: '12px' }}>Type</th>
+                <th style={{ textAlign: 'center', padding: '12px' }}>Action</th>
               </tr>
             </thead>
             <tbody>
               {tasks.map((task) => {
                 const isDone = task.status === 'Completed';
                 return (
-                  <tr key={task._id} style={{ opacity: isDone ? 0.5 : 1, transition: 'opacity 0.2s' }}>
-                    <td style={{ textAlign: 'center' }}>
+                  <tr key={task._id} style={{ opacity: isDone ? 0.5 : 1, transition: 'opacity 0.2s', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                    <td style={{ textAlign: 'center', padding: '12px' }}>
                       <input 
                         type="checkbox" 
                         checked={isDone}
@@ -91,12 +91,12 @@ function TaskTracker() {
                         style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: '#00e676' }}
                       />
                     </td>
-                    <td style={{ textDecoration: isDone ? 'line-through' : 'none', fontWeight: '500' }}>
+                    <td style={{ textDecoration: isDone ? 'line-through' : 'none', fontWeight: '500', padding: '12px' }}>
                       {task.taskDetail}
                     </td>
-                    <td style={{ color: '#aaa', fontSize: '0.95rem' }}>{task.courseStream}</td>
-                    <td style={{ color: '#ccc' }}>{task.dueDate}</td>
-                    <td style={{ textAlign: 'center' }}>
+                    <td style={{ color: '#aaa', fontSize: '0.95rem', padding: '12px' }}>{task.courseStream}</td>
+                    <td style={{ color: '#ccc', padding: '12px' }}>{task.dueDate}</td>
+                    <td style={{ textAlign: 'center', padding: '12px' }}>
                       <span style={{ 
                         ...getTypeBadgeClass(task.type),
                         padding: '4px 10px', 
@@ -107,7 +107,7 @@ function TaskTracker() {
                         {task.type}
                       </span>
                     </td>
-                    <td style={{ textAlign: 'center', fontWeight: 'bold', color: isDone ? '#00e676' : '#ff1744' }}>
+                    <td style={{ textAlign: 'center', fontWeight: 'bold', color: isDone ? '#00e676' : '#ff1744', padding: '12px' }}>
                       {task.status}
                     </td>
                   </tr>

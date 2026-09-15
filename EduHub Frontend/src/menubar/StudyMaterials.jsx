@@ -23,7 +23,7 @@ import {
   DEFAULT_NOTES_CONTENT,
   triggerChromeDirectDownload
 } from "../data/defaultNotes";
-import "./StudyMaterials.css";
+import "../StudyMaterials.css";
 
 function StudyMaterials() {
   const [materials, setMaterials] = useState([]);
