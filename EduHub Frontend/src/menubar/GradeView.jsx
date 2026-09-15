@@ -1,5 +1,5 @@
 import React from "react";
-import "./GradeView.css"; // 🚀 FIXED: Changed from GradesView.css to GradeView.css
+import "./gradeView.css"; // 🚀 FIXED: Changed from GradesView.css to GradeView.css
 
 const GradeView = () => {
   const academicReports = [

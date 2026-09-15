@@ -17,7 +17,7 @@ import {
   ChevronRight,
   FileText,
 } from "lucide-react";
-import "./Home.css";
+import "./home.css";
 
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState("all");

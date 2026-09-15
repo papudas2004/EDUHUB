@@ -14,7 +14,7 @@ import {
   Sparkles,
   BookOpen,
 } from "lucide-react";
-import "./Achievements.css";
+import "./achievements.css";
 
 function Achievements() {
   const { user } = useAuth();

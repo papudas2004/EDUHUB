@@ -14,7 +14,7 @@ import {
   Save,
   GraduationCap,
 } from "lucide-react";
-import "./Profile.css";
+import "./profile.css";
 
 function Profile() {
   const { user, setUser } = useAuth();

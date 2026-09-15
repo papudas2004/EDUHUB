@@ -19,7 +19,7 @@ import {
   BarChart2,
   X,
 } from "lucide-react";
-import "./Quizzes.css";
+import "./quizzes.css";
 
 function Quizzes() {
   const { user, awardXP } = useAuth();

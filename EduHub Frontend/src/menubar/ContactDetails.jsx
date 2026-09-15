@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getContactById } from "../api/api";
-import "./ContactDetails.css"; 
+import "./contactDetails.css"; 
 
 const ContactDetails = () => {
   const { id } = useParams();

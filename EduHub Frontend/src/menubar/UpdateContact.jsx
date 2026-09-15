@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getContactById, updateContact } from "../api/api";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./ContactList.css"; 
+import "./contactList.css"; 
 
 const UpdateContact = () => {
   const { id } = useParams();

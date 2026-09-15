@@ -16,7 +16,7 @@ import {
   GraduationCap,
   X,
 } from "lucide-react";
-import "./Certificates.css";
+import "./certificates.css";
 
 function Certificates() {
   const { user } = useAuth();
